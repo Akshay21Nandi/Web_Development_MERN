@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display message</title>
+     <script>
+        function displaymessage(){
+            window.alert("This is alert window, which shows only ok buttom");
+            //confirm
+            ans= window.confirm("This is confirm window");
+            if(ans){//ans==true
+                alert("you select ok " + ans);
+            }else{
+                alert("you select cancel " + ans);
+            }
+            //promtbox is massage + text box
+            num1=prompt("enter number");
+            num2=prompt("enter number");
+            alert("Addition: " + (parseInt(num1)+parseInt(num2)));
+        }
+    </script>
+</head>
+<body>
+   
+    <button type="button" name="btn" onclick="displaymessage()">click me</button>
+</body>
+</html>

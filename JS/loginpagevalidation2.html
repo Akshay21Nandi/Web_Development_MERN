@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            //validate username is empty or not
+            function validateusername(){
+                uname = document.getElementById("uname").value;
+                if (uname.trim().length == 0) {
+                    document.getElementById("unameerr").innerHTML = "username is manditory";
+                    return false;
+                } else {
+                    document.getElementById("unameerr").innerHTML = "";
+                }
+            }
+            function validatepassword(){
+                pass = document.getElementById("pass").value;
+                if (pass.trim().length == 0) {
+                    document.getElementById("passerr").innerHTML = "password is manditory";
+                    return false;
+                } else {
+                    document.getElementById("passerr").innerHTML = "";
+                    return true;
+                }
+            }
+
+        
+            function validatedata(){
+                flag1=validateusername();
+                flag2=validatepassword();
+                if(flag1==flag2){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+
+        
+    </script>
+</head>
+
+<body>
+    <table>
+        <form onsubmit="return validatedata()">
+            <tr>
+                <td>User name : </td>
+                <td><input type="text" name="uname" id="uname"></td>
+                <td id="unameerr"></td>
+            </tr>
+            <tr>
+                <td>Password :</td>
+                <td> <input type="password" name="pass" id="pass"></td>
+                <td id="passerr"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit" name="btn">Login</button></td>
+                <td></td>
+            </tr>
+
+        </form>
+    </table>
+</body>
+
+</html>
